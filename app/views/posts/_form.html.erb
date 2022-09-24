@@ -1,0 +1,25 @@
+<%= form_with model: @post_form,  url: url, method: method, id: 'new_post', local: true do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
+  <div class="message-field">
+    <%= f.text_field :text, placeholder: 'type a message' %>
+  </div>
+
+  <%# タグの入力フォーム %>
+   <div class="tag-field">
+    <%= f.text_field :tag_name, placeholder: 'add tags' %>
+   
+    <%# 検索機能追加のための記述 JavaScript %>
+   <div id="search-result"></div>
+
+   </div>
+
+
+  <div class="image-field">
+    <div class="click-upload">
+      <%= f.file_field :image %>
+    </div>
+  </div>
+  <div class="submit-btn">
+    <%= f.submit '送信' %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<h3>トップページ</h3>
+<h3><%= link_to '新規投稿', new_post_path%></h3>
+<% @posts.each do |post| %>
+  <div class="posted-content">
+    <%= image_tag post.image %><br>
+    <%= post.text%><br>
+    <%= link_to '詳細', post_path(post.id)%>
+  </div>
+<% end %>

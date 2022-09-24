@@ -1,0 +1,24 @@
+table {
+  border-collapse:collapse;
+};
+
+th, td {
+  padding: 5px;
+  border: 1px solid #dedede;
+}
+
+th{
+  background-color: #F4F4F4;
+}
+
+#search-result{
+  width: 30%;
+}
+
+.child{
+  margin: 5px;
+  border: 1px solid #dedede;
+  background-color: #F4F4F4;
+  padding: 5px;
+  font-size: 12px;
+}
